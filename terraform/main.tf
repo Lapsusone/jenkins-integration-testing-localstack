@@ -58,7 +58,7 @@ resource "aws_lambda_function" "random_word_generator" {
   filename         = "../lambda.zip"
   function_name    = "random_word_generator"
   role             = aws_iam_role.lambda.arn
-  handler          = "random_word_generator.lambda_handler"
+  handler          = "lambda_function.lambda_handler"
   runtime          = "python3.7"
   source_code_hash = filebase64sha256("../lambda.zip")
 }

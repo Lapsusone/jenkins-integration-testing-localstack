@@ -1,4 +1,4 @@
 # jenkins-integration-testing-localstack
 
 
-docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+To get admin password for jenkins: `docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword`
