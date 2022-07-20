@@ -21,11 +21,11 @@ def lambda_handler(event, context):
     # Add a file to your Object Store
     length = random.randint(1, 100)
     response = s3.put_object(
-        Bucket=bucket_name, Key=random_word(length), Body=length, ACL="public-read"
+        Bucket=bucket_name, Key=random_word(length), Body=str(length), ACL="public-read"
     )
     return response
 
 
 def random_word(length):
-    letters = str.ascii_lowercase
+    letters = "abcdefghijklmnopqrstuvwxyz0123456789"
     return "".join(random.choice(letters) for i in range(length))

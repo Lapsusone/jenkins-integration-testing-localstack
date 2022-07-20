@@ -48,7 +48,7 @@ resource "aws_iam_role" "lambda" {
   "Statement": {
     "Effect": "Allow",
     "Action": "s3:*",
-    "Resource": "arn:aws:s3:::example_bucket"
+    "Resource": "arn:aws:s3:::my-bucket"
   }
 }
 EOF
